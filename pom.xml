@@ -21,10 +21,11 @@
         </license>
     </licenses>
     <properties>
-        <wicket.version>1.4.17</wicket.version>
+        <wicket.version>1.4.19</wicket.version>
         <slf4j.version>1.5.8</slf4j.version>
         <log4j.version>1.2.16</log4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
     </properties>
     <dependencies>
 		<!--  WICKET DEPENDENCIES -->
@@ -33,11 +34,11 @@
             <artifactId>wicket</artifactId>
             <version>${wicket.version}</version>
         </dependency>
-		
-        <dependency> 
+
+        <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-extensions</artifactId>
-            <version>${wicket.version}</version> 
+            <version>${wicket.version}</version>
         </dependency>
 
         <dependency>
