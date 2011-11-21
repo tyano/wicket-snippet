@@ -1,13 +1,14 @@
 package jp.javelindev;
 
 import jp.javelindev.snippet.CustomErrorPage;
-import jp.javelindev.snippet.ExpireAjaxPage;
+import jp.javelindev.snippet.ValidatorPage;
+import org.apache.wicket.Page;
 import org.apache.wicket.markup.html.pages.PageExpiredErrorPage;
 import org.apache.wicket.protocol.http.WebApplication;
 
 /**
  * Application object for your web application. If you want to run this application without deploying, run the Start class.
- * 
+ *
  * @see jp.javelindev.Start#main(String[])
  */
 public class WicketApplication extends WebApplication {
@@ -22,8 +23,8 @@ public class WicketApplication extends WebApplication {
      * @see org.apache.wicket.Application#getHomePage()
      */
     @Override
-    public Class<ExpireAjaxPage> getHomePage() {
-        return ExpireAjaxPage.class;
+    public Class<? extends Page> getHomePage() {
+        return ValidatorPage.class;
     }
 
     @Override
@@ -35,5 +36,6 @@ public class WicketApplication extends WebApplication {
 
         mountBookmarkablePage("expired", PageExpiredErrorPage.class);
         mountBookmarkablePage("pageExpired", CustomErrorPage.class);
+        mountBookmarkablePage("validator", ValidatorPage.class);
     }
 }
